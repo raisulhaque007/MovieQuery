@@ -26,12 +26,23 @@ console.log(addMovie(newMovie));
 
 function movieByRating(){
   //add code
+  movieList.sort(function(a, b){return b.rating - a.rating});
+  console.log(movieList);
 }
 
 console.log(movieByRating());
 
 function findByTitle( title ){
   //add code
+  for(var i=0; i<movieList.length; i++)
+  {
+    var temp = movieList[i].title.search(/matrix/i);
+    if(temp > 0)
+    {
+      console.log(movieList[i]);
+    }
+  }
+
 }
 
 console.log(findByTitle("matrix"));
